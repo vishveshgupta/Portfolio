@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishvesh Gupta</title>
+    <link rel="icon" type="image/x-icon" href="./IMAGES/logo white.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js"></script>
+<script src="./JAVASCRIPT/formvalidation.js"></script>
+
+    <meta charset="utf-8" />
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+  background: #fece0c;
+}
+
+.wrapper{
+  position: absolute;
+  
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90vw;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px rgba(254,236,164,1); 
+}
+
+.wrapper h2{
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #332902;
+}
+
+.wrapper .input_field{
+  margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 10px;
+}
+
+.wrapper textarea{
+  resize: none;
+  height: 80px;
+}
+
+.wrapper .btn input[type="submit"]{
+  border: 0px;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background: #fece0c;
+  color: #332902;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#error_message{
+  margin-bottom: 20px;
+  background: #fe8b8e;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+
+  body{
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+*{
+  margin:0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1500px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+img{
+  max-height: 100%;
+  vertical-align: middle;
+}
+/*.gallery*/
+.gallery{
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+  background-color: white;
+  padding: 5px 0;
+}
+.gallery .gallery-filter{
+  padding: 0 5px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.gallery .gallery-filter .filter-item{
+  color: black;
+  font-size: 17px;
+  font-family:Impact, sans-serif;
+  border: 2px solid white;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  padding: 8px 20px 8px 20px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+.gallery .gallery-filter .filter-item.active{
+  color: white;
+  border-color : #16b5ef;
+  background: #16b5ef;
+}
+.gallery .gallery-item{
+  width: calc(100% / 4);
+  padding: 10px;
+  height: 100%;
+}
+
+/*.SIZE OF THE IMAGE*/
+.gallery .gallery-item-inner-portrait img{
+  width: 100%;
+
+}
+.gallery .gallery-item-inner-landscape img{
+  
+height:500px;
+}
+.gallery .gallery-item.show{
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.gallery .gallery-item.hide{
+  display: none;
+}
+
+/*responsive*/
+@media(max-width: 991px){
+  .gallery .gallery-item{
+    width: 50%;
+  }
+}
+@media(max-width: 767px){
+    .gallery .gallery-item{
+    width: 100%;
+  }
+  .gallery .gallery-filter .filter-item{
+    margin-bottom: 10px;
+  }
+}
+
+    
+    .navtrans {
+        /* blur nav  */
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        padding: 10px 15px;
+    }
+    .bgcontact {
+        background-image: url("./IMAGES/204915.jpg");
+        background-attachment:scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+   
+
+
+/* background image  */
+    .bghome {
+        background-image: url("./IMAGES/dragon-hero city.png");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+/* navigation bar text color  */
+    .navbar .nav-link {
+        color: rgb(0, 0, 0);
+    }
+
+ /* If the screen size is 1025 px wide or more,font-size to 30px */
+@media (min-width: 1101px) {
+  .responsive-font-example {
+    font-size: 30px;
+  }
+}
+/* If the screen size is smaller than 1024px, font-size is 15px */
+@media (max-width: 1100.98px) {
+  .responsive-font-example {
+    font-size:15px;
+  }
+}
+
+
+/* my work image grid  */
+.image-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-auto-rows: 300px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+
+/* my work images */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;  
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 800px) {
+    .card-tall-2-block {
+    grid-row: span 2 / auto;
+  } 
+  
+  .card-tall-3-block {
+    grid-row: span 3 / auto;
+  }
+
+  .card-wide-3-block {
+    grid-column: span 3 / auto;
+  }
+
+  .card-wide-2-block {
+    grid-column: span 2 / auto;
+  }
+}
+@media screen and (max-width: 799px) {
+.card-tall-2-block-Others {
+  grid-row: span 2 / auto;
+}
+
+
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
+
+}
+</style>
+
+<body>
+    <!-- navigation bar  -->
+    <nav class="navbar navbar-expand fixed-top navtrans justify-content-center"> 
+        
+
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div id="my-nav" class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav justify-content-center ">
+                <li class="nav-item active p-2">
+                    <a class="nav-link " href="#div1"><b>Home</b></a>
+                </li>
+                
+                <li class="nav-item active p-2">
+                    <a class=" nav-link " href="#div2"><b>About me</b></a>
+                </li>
+              
+                <li class="nav-item active p-2">
+                    <a class="nav-link " href="#div3"><b>My Work</b></a>
+                </li>
+                <li class="nav-item active p-2">
+                  <a class="nav-link" href="./HTML/portfolioblog.html"><b>Blog</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div id="div1" class="bghome" style="height:100vh"><!-- home page -->
+        <br><br><br><br>
+        <div class="row container-fluid m-auto">
+            <div class="container-fluid col-5 m-auto"><img src="./IMAGES/logo white.png" height="80vw"> </div>
+            
+            
+            
+            <div class="container-fluid col-3 m-auto "></div>
+           
+           
+           
+            <div class="container-fluid col-4 m-auto d-flex flex-row-reverse"> <a href="https://www.instagram.com/vishveshgupta_"
+                    style="color:white ; text-align: right;"><img src="./IMAGES/Asset 1.png" height="42vh"></a>
+                       <!-- social media links -->
+                    <a href="https://www.facebook.com" style="color:white ; padding-top: .5vh; padding-right: 2vw;"> <img
+                            src="./IMAGES/Asset 2.png " height="32px"></a></div>
+        </div>
+
+        <div class="responsive-font-example; fade-in-text">
+            <div class="container-fluid col-2    m-auto "></div>
+            <div class="container col-6 responsive-font-example">
+            <p style=" text-align: center; color: white ; font-family: 'Trebuchet MS bold', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; padding-top: 19vh;padding-bottom: 2vh"
+                ;>
+                <b>Vishvesh Gupta is a communication design
+                    student and an amateur photographer currently
+                    in Mumbai. He loves to illustrate characters,
+                    logos, and packages. Capturing memories and 
+                    expressions interests him the most.</b>
+                    <!-- home page bio  -->
+                </p>
+        </div>
+        <div class="container-fluid col-2 m-auto "></div>
+        <br>
+        </div>
+        <p style="color:white ; text-align: center; ">
+            <a class="nav-link" href="#div2" style="color:white;">Learn more</a>
+        </p>
+    </div>
+   
+    <div id="div2" class="bg-white" style="height:100vh" ;> <!-- about me page -->
+        
+        <div class="row container-fluid responsive-font-example ">
+            <div class="container-fluid col-1 m-auto  "></div>
+            
+            
+            
+            <div class="container-fluid col-5 m-auto p-xxl-5 fade-in-text img-fluid "><img src="./IMAGES/runn.png"
+                    class="img-fluid" width="300vw"> </div>
+           
+           
+           
+            <div class="container-fluid col-6 responsive-font-example"><b>
+                    <p style="  padding-bottom: 35vh; padding-top: 35vh;">I am a design enthusiast
+                        currently in Mumbai specializing in communication design. I am a skilled photographer and a
+                        videographer for myself, capturing Himalayan beauty. Carrying a good sense of illustrating and
+                        UI/UX design, I am on a journey to learn about new things every day. Apart from my creative
+                        field, I am a part-time professional athlete competing in IRONMAN Triathlons and other racing
+                        events.
+                </b></p>
+            </div>
+        </div>
+        </div>
+        
+        
+        
+        <div id="div3" style="height:auto; padding: 30px 10px ; background-color: white;"> <!-- My work page -->
+            
+            <br><br><br><br>
+            <p style="font-size: 5vh; align-content: center; align-self: center; text-align: center; color: black;">
+                <b>My Work</b>
+            </p>
+            <br><br>
+      
+<section class="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="gallery-filter">
+        <span class="filter-item active" data-filter="all">All</span>
+        <span class="filter-item" data-filter="Crocs">Crocs</span>
+        <span class="filter-item" data-filter="Indianartposters">Indian art posters</span>
+        <span class="filter-item " data-filter="Photography">Photography</span>
+        <span class="filter-item" data-filter="Others">Others</span>
+      </div>
+    </div>
+    <div class="row">
+      <!-- gallery item start -->
+    
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item Photography">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/_DSC6265.jpg" alt="Photography">
+        </div>
+      </div>
+      <div class="gallery-item Photography">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/7AE63A0C-09A0-4631-8144-DE4A9C6873A5.jpg" alt="Photography">
+        </div>
+      </div>
+      <div class="gallery-item Photography">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/_DSC4318-01-01.jpeg" alt="Photography">
+        </div>
+      </div>
+      <div class="gallery-item Photography">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Startrailsb3.jpg" alt="Photography">
+        </div>
+      </div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item Photography">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/_DSC6051.jpg" alt="Photography">
+        </div>
+      </div>
+      <div class="gallery-item Photography">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/IMG_20220105_123540__01.jpg" alt="Photography">
+        </div>
+      </div>
+      <div class="gallery-item Photography">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/_DSC5956.jpg" alt="Photography">
+        </div>
+      </div>
+      <div class="gallery-item Photography">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/_DSC6235.jpg" alt="Photography">
+        </div>
+      </div>
+     
+    
+      <div class="gallery-item Others">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/jbl mock.png" alt="Others">
+        </div>
+      </div>
+<!-- gallery item end -->
+<div class="gallery-item Others">
+<div class="gallery-item-inner-portrait">
+<img src="./IMAGES/pepsi.png" alt="Others">
+</div>
+</div>
+      <!-- gallery item end -->
+      <!-- gallery item start -->
+      <div class="gallery-item Indianartposters">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/poster 2.png" alt="Indianartposters">
+        </div>
+      </div>
+      <!-- gallery item end -->
+      <div class="gallery-item Indianartposters">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/poster 3.png" alt="Indianartposters">
+        </div>
+      </div>
+      <!-- gallery item start -->
+      <div class="gallery-item Indianartposters">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Poster 1.png" alt="Indianartposters">
+        </div>
+      </div>
+      
+      <!-- gallery item end -->
+      
+      <div class="gallery-item Indianartposters">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Posster 4.png" alt="Indianartposters">
+        </div>
+      </div>
+
+
+      <div class="gallery-item Crocs">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Artboard 1.png" alt="Crocs">
+        </div>
+      </div>
+    
+    
+
+      <!-- gallery item start -->
+      <div class="gallery-item Crocs">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Artboard 10.png" alt="Crocs">
+        </div>
+      </div>
+      <div class="gallery-item Crocs">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Artboard 11.png" alt="Crocs">
+        </div>
+      </div>
+      <div class="gallery-item Crocs">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Artboard 12.png" alt="Crocs">
+        </div>
+      </div>
+      <div class="gallery-item Crocs">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Artboard 2.png" alt="Crocs">
+        </div>
+      </div>
+      <div class="gallery-item Crocs">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Artboard 3.png" alt="Crocs">
+        </div>
+      </div>
+      <div class="gallery-item Crocs">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Artboard 4.png" alt="Crocs">
+        </div>
+      </div>
+      <div class="gallery-item Crocs">
+        <div class="gallery-item-inner-portrait">
+          <img src="./IMAGES/Artboard 9.png" alt="Crocs">
+        </div>
+      </div>
+     
+      <!-- gallery item end -->
+    </div>
+  </div>
+</section>
+
+        
+
+
+
+
+
+</div>
+</div>
+
+
+
+         <div id="div4"  style="height: 100vh; background-color: #fece0c;" ><!-- Contact us page -->
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+
+
+            <div class="wrapper">
+  
+  <div id="error_message">
+     
+  </div>
+
+  <div class="row container-fluid m-auto">
+    <div class="container-fluid col-6 m-auto"> 
+    
+    
+
+
+
+
+
+  
+  <form action="" id="myform" onsubmit = "return validate();">
+    <h2>Contact me</h2>
+    <div class="input_field">
+        <input type="text" placeholder="Name" id="name">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Subject" id="subject">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Phone" id="phone">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Email" id="email">
+    </div>
+    <div class="input_field">
+        <textarea placeholder="Message" id="message"></textarea>
+    </div>
+    <div class="btn">
+        <input type="submit">
+    </div>
+  </div>
+    <div class="row container-fluid col-6 m-auto responsive-font-example">
+
+<p style="font-size:50px ;" class="responsive-font-example">Let's get in touch</p><br>
+<p style="font-size:25px ;">
+I may take time to reply but would definetly love to hear something from you!
+      </p>
+      <p style="font: size 30px; ">
+      E-1203, BPTP FREEDOM PARK LIFE, SECTOR 57<BR>
+        Gurgaon,Haryana,122003
+      </p>
+      <p style="font: size 30px; ">
+       +91 7042235982
+        </p>
+        <br><br>
+        
+      
+    </div>
+  </form>
+  </div>
+</div>
+
+
+      
+        </div>
+    
+    <script>
+
+
+      const filterContainer = document.querySelector(".gallery-filter"),
+      galleryItems = document.querySelectorAll(".gallery-item");
+     
+      filterContainer.addEventListener("click", (event) =>{
+        if(event.target.classList.contains("filter-item")){
+          // deactivate existing active 'filter-item'
+          filterContainer.querySelector(".active").classList.remove("active");
+          // activate new 'filter-item'
+          event.target.classList.add("active");
+          const filterValue = event.target.getAttribute("data-filter");
+          galleryItems.forEach((item) =>{
+            if(item.classList.contains(filterValue) || filterValue === 'all'){
+             item.classList.remove("hide");
+              item.classList.add("show");
+            }
+            else{
+             item.classList.remove("show");
+             item.classList.add("hide");
+            }
+          });
+        }
+      });
+     </script>
+  </body>
+
+</html>
