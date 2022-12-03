@@ -28,68 +28,136 @@
 
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
-*{
-  margin: 0;
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 
-
-.wrapper{
-  position: absolute;
-  
-  left: 50%;
-  transform: translate(-50%,-50%);
-  max-width: 90vw;
+.contact-form {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
   background: #fff;
-  padding: 25px;
-  border-radius: 5px;
-  box-shadow: 4px 4px 2px rgba(254,236,164,1); 
+  margin: 50px 0;
 }
-
-.wrapper h2{
+.contact-form > * {
+  width: 50%;
+}
+.contact-form .first-container {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./IMAGES/CVIS9815.jpg") center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form .first-container .info-container div {
+  margin: 24px 0;
+}
+.contact-form .first-container .info-container div h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-bottom: 10px;
+}
+.contact-form .first-container .info-container div:first-of-type p {
+  max-width: 260px;
+  color: #999;
+}
+.contact-form .first-container .info-container div p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #00ad5f;
+}
+.contact-form .second-container {
+  padding: 30px;
+}
+.contact-form .second-container h2 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.2;
   text-align: center;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #332902;
 }
-
-.wrapper .input_field{
+.contact-form .second-container form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form .second-container form .form-group {
   margin-bottom: 10px;
 }
-
-.wrapper .input_field input[type="text"],
-.wrapper textarea{
-  border: 1px solid #e0e0e0;
-  width: 100%;
-  padding: 10px;
+.contact-form .second-container form .form-group * {
+  min-height: 55px;
+  border: 1px solid #e6e6e6;
+  padding: 0 20px;
 }
-
-.wrapper textarea{
-  resize: none;
-  height: 80px;
-}
-
-.wrapper .btn input[type="submit"]{
-  border: 0px;
-  margin-top: 15px;
-  padding: 10px;
-  text-align: center;
+.contact-form .second-container form .form-group label {
+  display: flex;
+  align-items: center;
   width: 100%;
-  background: #fece0c;
-  color: #332902;
+  border: 1px solid #e6e6e6;
+  font-size: 16px;
+  color: #333;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  font-weight: bold;
-  border-radius: 25px;
+  margin-top: -1px;
+}
+.contact-form .second-container form .form-group:first-of-type input {
+  width: 50.1%;
+  margin-right: -5px;
+}
+.contact-form .second-container form .form-group input {
+  width: 100%;
+  font-size: 15px;
+  margin-top: -2px;
+}
+.contact-form .second-container form .form-group input::placeholder, .contact-form .second-container form .form-group textarea::placeholder {
+  color: #999;
+}
+.contact-form .second-container form .form-group textarea {
+  width: 100%;
+  min-height: 80px;
+  resize: none;
+  padding: 10px 20px;
+  margin-top: -1px;
+}
+.contact-form .second-container form button {
+  width: 200px;
+  height: 50px;
+  background: #00ad5f;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 0;
+  position: relative;
+  left: calc(50% - 100px);
   cursor: pointer;
 }
+.contact-form .second-container form button:hover {
+  background: #333;
+}
 
+@media screen and (max-width: 1000px) {
+  .contact-form {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 999px) {
+  .contact-form {
+    flex-direction: column-reverse;
+  }
+  .contact-form > * {
+    width: 100vw;
+  }
+  .contact-form .first-container {
+    padding: 0px 0;
+  }
+}
 #error_message{
   margin-bottom: 20px;
   background: #fe8b8e;
@@ -98,7 +166,6 @@
   font-size: 14px;
   transition: all 0.5s ease;
 }
-
 
   body{
   line-height: 1.5;
@@ -191,7 +258,7 @@ height:500px;
 }
 @media(max-width: 767px){
     .gallery .gallery-item{
-    width: 100%;
+    width: 50%;
   }
   .gallery .gallery-filter .filter-item{
     margin-bottom: 10px;
@@ -201,9 +268,9 @@ height:500px;
     
     .navtrans {
         /* blur nav  */
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
-        padding: 10px 15px;
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        padding: 10px 10px;
     }
     .bgcontact {
         background-image: url("./IMAGES/204915.jpg");
@@ -561,74 +628,62 @@ height:500px;
 
 
 </div>
-</div>
 
 
 
-         <div id="div4"  style="height: 100vh; background-color: #fece0c;" ><!-- Contact us page -->
-            <br><br><br><br>
-            <br><br><br><br>
-            <br><br><br><br>
-            <br><br><br><br>
-</div>
-            <div class="wrapper">
+         <div id="div4"  style="height: 80vh; margin-top: 10vh;" ><!-- Contact us page -->
+           
+           
+
+<div class="contact-form">
   
-  <div id="error_message">
-     
-  </div>
-
-  <div class="row container-fluid m-auto image-grid">
-    <div class="container-fluid col-6 m-auto"> 
-    
-    
-
-
-
-
-
-  
-  <form action="" id="myform" onsubmit = "return validate();">
-    <h2>Contact me</h2>
-    <div class="input_field">
-        <input type="text" placeholder="Name" id="name">
-    </div>
-    <div class="input_field">
-        <input type="text" placeholder="Subject" id="subject">
-    </div>
-    <div class="input_field">
-        <input type="text" placeholder="Phone" id="phone">
-    </div>
-    <div class="input_field">
-        <input type="text" placeholder="Email" id="email">
-    </div>
-    <div class="input_field">
-        <textarea placeholder="Message" id="message"></textarea>
-    </div>
-    <div class="btn">
-        <input type="submit">
+  <div class="first-container">
+    <div class="info-container">
+      <div><img class="icon">
+        <h3>Address</h3>
+        <p>E-1203, BPTP freedom park life, sector-57, gurgaon, haryana, India</p>
+      </div>
+      <div> <img class="icon">
+        <h3>Lets Talk</h3>
+        <p>+91 7042235982</p>
+      </div>
+      <div><img class="icon">
+        <h3>Connect </h3>
+        <p>vishveshgupta3101@gmail.com</p>
+      </div>
     </div>
   </div>
-    <div class="row container-fluid col-6 m-auto ">
+  <div class="second-container">
+    <div id="error_message">
+  </div>
 
-<p style="font-size:4vw ;">Let's get in touch</p><br>
-<p style="font-size:2vw ;">
-I may take time to reply but would definitely love to hear something from you!
-      </p>
-      <p style="font: size 1.5vw; ">
-      E-1203, bptp freedom park life,sector-57<BR>
-        Gurgaon,Haryana,<br>122003
-      </p>
-      <p style="font: size 1.5vw; ">
-       +91 7042235982
-        </p>
-        <br><br>
-        
-      
-    </div>
-  </form>
+    <h2>Send me a message</h2>
+    <form name="contactForm"  id="myform"onsubmit = "return validate();" >
+      <div class="form-group input_field">
+        <label >Tell me your name*</label>
+        <input  placeholder="first name" id="name" required >
+        <input type="text" placeholder="Last name" required>
+      </div>
+      <div class="form-group input_field">
+        <label>Enter your email*</label>
+        <input  placeholder="Eg. example@email.com" id="email" type="email" required>
+      </div>
+      <div class="form-group input_field">
+        <label>Enter phone number*</label>
+        <input placeholder="Eg. 987654321" id="phone" type="number" required>
+      </div>
+      <div class="form-group input_field">
+        <label for="message-textarea">Message</label>
+        <textarea id="message-textarea" placeholder="Write us a message" required></textarea>
+      </div>
+   
+      <button>Send message</button>
+
+    </form>
   </div>
 </div>
 
+</div>
 
       
         </div>
